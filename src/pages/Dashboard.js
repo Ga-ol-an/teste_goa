@@ -1,5 +1,5 @@
 import { Button, Container, Flex } from "@chakra-ui/react";
-import { auth, db} from "../firebase";
+import { auth, db, logout } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
@@ -96,7 +96,9 @@ export default function Dashboard() {
           </Flex>
         </Container>
       </Flex>
-
+      <Container>
+        <Button variant="solid" bg="red" color="white" onClick={logout} width="100%">Sair</Button>
+      </Container>
       <NoteModal noteContent={modalNoteContent === undefined ? undefined : modalNoteContent} isOpen={modalOpen} onClose={closeModal} onSubmit={modalNoteContent ? updateNote : createNote} />
     </>
   );
