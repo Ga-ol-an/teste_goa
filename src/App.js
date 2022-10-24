@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NotFoundPage from "./pages/NotFoundPage";
+import NotFoundPage from "./pages/simpleFirstPage";
 import { ChakraProvider } from '@chakra-ui/react'
-import LoginPage from "./pages/LoginPage";
-import Dashboard from "./pages/Dashboard";
 
 
 function App() {
